@@ -13,6 +13,11 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
+      {
+        src: 'https://unpkg.com/element-ui/lib/index.js'
+      },
     ]
   },
   /*
@@ -23,11 +28,16 @@ export default {
   ** Global CSS
   */
   css: [
+    'element-ui/lib/theme-chalk/index.css'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    {
+      src: 'plugins/plugins',
+      ssr: false
+    }
   ],
   /*
   ** Nuxt.js dev-modules
